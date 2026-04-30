@@ -1,14 +1,27 @@
-# **Aljada-Empleo**
-## Proyecto de final del módulo Lenguaje de Marcas.
->### **Integrantes:** 
->> - Irene Abellán Cerezo 
->> - José Manuel Cascales Ortiz
->> - Luis Ferrán Lorenzo 
+# 🚀 Aljada-Empleo
+## Proyecto Final de Módulo: Lenguajes de Marcas y Sistemas de Gestión de Información
 
-### **Tecnologías utilizadas:**
-- HMTL5
-- JavaScript
-- CSS3
-- XML
+**Aljada-Empleo** es un portal diseñado para facilitar la conexión laboral entre empresas y alumnos del IES Aljada, permitiendo una segmentación eficiente por familia profesional.
 
-Portal para la conexión laboral empresas-alumnos segmentada por familia profesional.
+---
+
+### 👥 Integrantes y Roles
+
+*   **Irene Abellán Cerezo**: rol TBD
+*   **José Manuel Cascales Ortiz**: rol TBD
+*   **Luis Ferrán Lorenzo**: rol TBD
+
+---
+
+### Tecnologías Utilizadas
+*   **Lenguajes:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+).
+*   **Datos:** JSON (Estructura semántica) y XML (Formato WXR para WordPress).
+*   **Validación:** JSON Schema / XSD.
+*   **Herramientas:** GitHub Pages, WordPress, IA para generación de scripts.
+
+---
+
+### Descripción del Problema
+Actualmente, la gestión de ofertas de empleo en los centros educativos suele estar dispersa. Este proyecto resuelve el problema centralizando las ofertas en una estructura de datos estandarizada que permite su importación masiva a la web del centro.
+
+---
