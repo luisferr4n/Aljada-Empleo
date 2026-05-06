@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["ofertas"],
+  "properties": {
+    "ofertas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titulo", "empresa", "descripcion"],
+        "properties": {
+          "id-oferta": {
+            "type": "string",
+            "pattern": "^OF-[0-9]{3}$"
+          },
+          "Titulo": {
+            "type": "string",
+            "minLength": 5
+          },
+          "Empresa": {
+            "type": "string",
+            "minLength": 2
+          },
+          "familia_profesional": {
+            "type": "string"
+          },
+          "Localizacion": {
+            "type": "string"
+          },
+          "Requisitos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Descripcion": {
+            "type": "string",
+            "minLength": 10
+          },
+          "Fecha": {
+            "type": "string",
+            "format": "date"
+          },
+          "Estado": {
+            "type": "string",
+            "enum": ["activa", "cerrada"]
+          }
+        }
+      }
+    }
+  }
+}

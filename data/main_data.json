@@ -1,0 +1,15 @@
+{
+  "ofertas": [
+    {
+      "id-oferta": "string",
+      "Titulo": "string",
+      "Empresa": "string",
+      "familia_profesional": "string",
+      "Requisitos": ["string"],
+      "Localizacion": "string",
+      "Descripcion": "string",
+      "Fecha": "string",
+      "Estado": "string"
+    }
+  ]
+}

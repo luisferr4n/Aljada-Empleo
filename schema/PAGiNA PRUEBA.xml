@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ofertas">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="oferta" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              
+              <xs:element name="id" type="xs:string"/>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="empresa" type="xs:string"/>
+              <xs:element name="familia_profesional" type="xs:string" minOccurs="0"/>
+              <xs:element name="ubicacion" type="xs:string" minOccurs="0"/>
+              
+              <xs:element name="requisitos" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="requisito" type="xs:string" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="descripcion" type="xs:string"/>
+              <xs:element name="fecha_publicacion" type="xs:date" minOccurs="0"/>
+              <xs:element name="estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="activa"/>
+                    <xs:enumeration value="cerrada"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
