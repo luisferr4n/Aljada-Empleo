@@ -9,39 +9,39 @@
         "type": "object",
         "required": ["id", "titulo", "empresa", "descripcion"],
         "properties": {
-          "id": {
+          "id-oferta": {
             "type": "string",
             "pattern": "^OF-[0-9]{3}$"
           },
-          "titulo": {
+          "Titulo": {
             "type": "string",
             "minLength": 5
           },
-          "empresa": {
+          "Empresa": {
             "type": "string",
             "minLength": 2
           },
           "familia_profesional": {
             "type": "string"
           },
-          "ubicacion": {
+          "Localizacion": {
             "type": "string"
           },
-          "requisitos": {
+          "Requisitos": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "descripcion": {
+          "Descripcion": {
             "type": "string",
             "minLength": 10
           },
-          "fecha_publicacion": {
+          "Fecha": {
             "type": "string",
             "format": "date"
           },
-          "estado": {
+          "Estado": {
             "type": "string",
             "enum": ["activa", "cerrada"]
           }
