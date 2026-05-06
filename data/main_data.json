@@ -4,11 +4,12 @@
       "id-oferta": "string",
       "Titulo": "string",
       "Empresa": "string",
-      "Categoria": "string",
+      "familia_profesional": "string",
       "Requisitos": ["string"],
-      "Descripcion": "string",
       "Localizacion": "string",
-      "Fecha": "string"
+      "Descripcion": "string",
+      "Fecha": "string",
+      "Estado": "string"
     }
   ]
 }
