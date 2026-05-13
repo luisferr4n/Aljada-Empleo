@@ -71,7 +71,7 @@ async function cargarOfertas(){
     try{
 
         const respuesta =
-            await fetch('ofertas.json');
+           await fetch(`ofertas.json?t=${Date.now()}`);
 
         const ofertas =
             await respuesta.json();
