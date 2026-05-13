@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -35,7 +36,7 @@
         alt="Logo IES Aljada"
     >
 
-    <h2>Aljada Empleo</h2>
+    <h2></h2>
 
 </div>
 
@@ -124,43 +125,68 @@
 
         <section class="search-section">
 
-            <form class="search-form">
+            <form
+    class="modal-form"
+    action="publicar.php"
+    method="POST"
+>
 
-                <input
-                    type="text"
-                    placeholder="Puesto o palabra clave"
-                >
+    <input
+        type="text"
+        name="empresa"
+        placeholder="Empresa"
+        required
+    >
 
-                <input
-                    type="text"
-                    placeholder="Ciudad o ubicación"
-                >
+    <input
+        type="text"
+        name="puesto"
+        placeholder="Título del empleo"
+        required
+    >
 
-                <select>
+    <input
+        type="text"
+        name="ubicacion"
+        placeholder="Ubicación"
+        required
+    >
 
-                    <option>
-                        Todas las categorías
-                    </option>
+    <select
+        name="tipo"
+        required
+    >
 
-                    <option>
-                        Programación
-                    </option>
+        <option value="">
+            Tipo de trabajo
+        </option>
 
-                    <option>
-                        Diseño
-                    </option>
+        <option>
+            Remoto
+        </option>
 
-                    <option>
-                        Marketing
-                    </option>
+        <option>
+            Presencial
+        </option>
 
-                </select>
+        <option>
+            Híbrido
+        </option>
 
-                <button type="submit">
-                    Buscar
-                </button>
+    </select>
 
-            </form>
+    <textarea
+        rows="5"
+        name="descripcion"
+        placeholder="Describe la oferta..."
+        required
+    ></textarea>
+
+    <button type="submit">
+        Publicar oferta
+    </button>
+
+</form>
 
         </section>
 
@@ -184,18 +210,7 @@
             </div>
 
 
-          <?php
-
-$ofertas = [];
-
-if (file_exists('ofertas.json')) {
-
-    $contenido = file_get_contents('ofertas.json');
-    $ofertas = json_decode($contenido, true);
-
-}
-
-?>
+          
 
 <section class="jobs-section">
 
@@ -214,30 +229,7 @@ if (file_exists('ofertas.json')) {
 
     <div class="jobs-grid">
 
-        <?php foreach($ofertas as $oferta): ?>
-
-            <article class="job-card">
-
-                <h3>
-                    <?php echo $oferta['puesto']; ?>
-                </h3>
-
-                <p>
-                    <?php echo $oferta['empresa']; ?>
-                </p>
-
-                <span>
-                    <?php echo $oferta['ubicacion']; ?>
-                </span>
-
-                <button>
-                    Ver oferta
-                </button>
-
-            </article>
-
-        <?php endforeach; ?>
-
+        
     </div>
 
 </section>
@@ -452,67 +444,9 @@ if (file_exists('ofertas.json')) {
 <!-- SCRIPT -->
 <!-- ========================= -->
 
-<script>
-
-    const buscarBtn =
-        document.querySelector('.primary-btn');
-
-    const vacanteBtn =
-        document.querySelector('.secondary-btn');
 
 
-    buscarBtn.addEventListener('click', () => {
-
-        document.getElementById(
-            'buscarModal'
-        ).style.display = 'flex';
-
-    });
-
-
-    vacanteBtn.addEventListener('click', () => {
-
-        document.getElementById(
-            'vacanteModal'
-        ).style.display = 'flex';
-
-    });
-
-
-    function cerrarModal(id){
-
-        document.getElementById(id)
-        .style.display = 'none';
-
-    }
-
-
-    window.onclick = function(event){
-
-        const buscarModal =
-            document.getElementById('buscarModal');
-
-        const vacanteModal =
-            document.getElementById('vacanteModal');
-
-        if(event.target === buscarModal){
-
-            buscarModal.style.display = 'none';
-
-        }
-
-        if(event.target === vacanteModal){
-
-            vacanteModal.style.display = 'none';
-
-        }
-
-    }
-
-</script>
-
-
-
+<script src="script.js"></script>
 
 
 </body>

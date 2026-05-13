@@ -229,6 +229,8 @@ body{
 .hero-right img{
     width: 100%;
     max-width: 550px;
+
+    margin-bottom: 80px;
 }
 
 

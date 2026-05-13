@@ -11,20 +11,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descripcion = $_POST['descripcion'];
 
     $nuevaOferta = [
+
         'empresa' => $empresa,
         'puesto' => $puesto,
         'ubicacion' => $ubicacion,
         'tipo' => $tipo,
         'descripcion' => $descripcion
+
     ];
 
     if (file_exists($archivo)) {
 
-        $contenido = file_get_contents($archivo);
-        $ofertas = json_decode($contenido, true);
+        $contenido =
+            file_get_contents($archivo);
+
+        $ofertas =
+            json_decode($contenido, true);
 
         if (!$ofertas) {
+
             $ofertas = [];
+
         }
 
     } else {
@@ -36,12 +43,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ofertas[] = $nuevaOferta;
 
     file_put_contents(
+
         $archivo,
-        json_encode($ofertas, JSON_PRETTY_PRINT)
+
+        json_encode(
+            $ofertas,
+            JSON_PRETTY_PRINT
+        )
+
     );
 
     header('Location: index.html');
     exit;
+
 }
 
 ?>
