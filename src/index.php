@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aljada Empleo</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+    <div class="logo">
+
+    <img
+        src="data:image/jpeg;base64,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"
+        alt="Logo IES Aljada"
+    >
+
+    <h2>Aljada Empleo</h2>
+
+</div>
+
+    <h2>Aljada Empleo</h2>
+
+</div>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Empleos</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="login-btn">Iniciar sesión</button>
+                <button class="register-btn">Registrarse</button>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- HERO SECTION -->
+        <!-- ========================= -->
+
+        <section class="hero">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-left">
+
+                <span class="hero-tag">
+                    Encuentra oportunidades reales
+                </span>
+
+                <h1>
+                    Tu próximo trabajo
+                    está a un clic
+                </h1>
+
+                <p>
+                    Miles de empresas buscan talento como el tuyo.
+                    Explora nuevas oportunidades y conecta con
+                    reclutadores de todo el mundo.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn">
+                        Buscar empleo
+                    </button>
+
+                    <button class="secondary-btn">
+                        Publicar vacante
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-right">
+
+                <img
+                    src="https://images.unsplash.com/photo-1758520145140-c2dd8e78fc02?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM4fHx8ZW58MHx8fHx8"
+                    alt="Persona trabajando"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- SEARCH SECTION -->
+        <!-- ========================= -->
+
+        <section class="search-section">
+
+            <form class="search-form">
+
+                <input
+                    type="text"
+                    placeholder="Puesto o palabra clave"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Ciudad o ubicación"
+                >
+
+                <select>
+
+                    <option>
+                        Todas las categorías
+                    </option>
+
+                    <option>
+                        Programación
+                    </option>
+
+                    <option>
+                        Diseño
+                    </option>
+
+                    <option>
+                        Marketing
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- JOBS SECTION -->
+        <!-- ========================= -->
+
+        <section class="jobs-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Ofertas destacadas
+                </h2>
+
+                <p>
+                    Descubre algunas de las mejores oportunidades disponibles.
+                </p>
+
+            </div>
+
+
+          <?php
+
+$ofertas = [];
+
+if (file_exists('ofertas.json')) {
+
+    $contenido = file_get_contents('ofertas.json');
+    $ofertas = json_decode($contenido, true);
+
+}
+
+?>
+
+<section class="jobs-section">
+
+    <div class="section-title">
+
+        <h2>
+            Ofertas destacadas
+        </h2>
+
+        <p>
+            Descubre algunas de las mejores oportunidades disponibles.
+        </p>
+
+    </div>
+
+
+    <div class="jobs-grid">
+
+        <?php foreach($ofertas as $oferta): ?>
+
+            <article class="job-card">
+
+                <h3>
+                    <?php echo $oferta['puesto']; ?>
+                </h3>
+
+                <p>
+                    <?php echo $oferta['empresa']; ?>
+                </p>
+
+                <span>
+                    <?php echo $oferta['ubicacion']; ?>
+                </span>
+
+                <button>
+                    Ver oferta
+                </button>
+
+            </article>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</section>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- BENEFITS -->
+        <!-- ========================= -->
+
+        <section class="benefits">
+
+            <div class="benefit-card">
+
+                <h3>
+                    Encuentra oportunidades
+                </h3>
+
+                <p>
+                    Accede a cientos de vacantes actualizadas diariamente.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <h3>
+                    Conecta con empresas
+                </h3>
+
+                <p>
+                    Habla directamente con reclutadores y empresas.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <h3>
+                    Impulsa tu carrera
+                </h3>
+
+                <p>
+                    Mejora tu perfil y destaca frente a otros candidatos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Aljada Empleo - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+<!-- ========================= -->
+<!-- MODAL BUSCAR EMPLEO -->
+<!-- ========================= -->
+
+<div class="modal" id="buscarModal">
+
+    <div class="modal-content">
+
+        <span
+            class="close-btn"
+            onclick="cerrarModal('buscarModal')"
+        >
+            &times;
+        </span>
+
+        <h2>Buscar empleo</h2>
+
+        <form class="modal-form">
+
+            <input
+                type="text"
+                placeholder="¿Qué puesto buscas?"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Ciudad o ubicación"
+                required
+            >
+
+            <select required>
+
+                <option value="">
+                    Selecciona categoría
+                </option>
+
+                <option>
+                    Programación
+                </option>
+
+                <option>
+                    Diseño
+                </option>
+
+                <option>
+                    Marketing
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Buscar ofertas
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- MODAL PUBLICAR VACANTE -->
+<!-- ========================= -->
+
+<div class="modal" id="vacanteModal">
+
+    <div class="modal-content">
+
+        <span
+            class="close-btn"
+            onclick="cerrarModal('vacanteModal')"
+        >
+            &times;
+        </span>
+
+        <h2>Publicar vacante</h2>
+
+        <form
+    class="modal-form"
+    action="publicar.php"
+    method="POST"
+>
+
+    <input
+        type="text"
+        name="empresa"
+        placeholder="Empresa"
+        required
+    >
+
+    <input
+        type="text"
+        name="puesto"
+        placeholder="Título del empleo"
+        required
+    >
+
+    <input
+        type="text"
+        name="ubicacion"
+        placeholder="Ubicación"
+        required
+    >
+
+    <select
+        name="tipo"
+        required
+    >
+
+        <option value="">
+            Tipo de trabajo
+        </option>
+
+        <option>
+            Remoto
+        </option>
+
+        <option>
+            Presencial
+        </option>
+
+        <option>
+            Híbrido
+        </option>
+
+    </select>
+
+    <textarea
+        rows="5"
+        name="descripcion"
+        placeholder="Describe la oferta..."
+        required
+    ></textarea>
+
+    <button type="submit">
+        Publicar oferta
+    </button>
+
+</form>
+
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script>
+
+    const buscarBtn =
+        document.querySelector('.primary-btn');
+
+    const vacanteBtn =
+        document.querySelector('.secondary-btn');
+
+
+    buscarBtn.addEventListener('click', () => {
+
+        document.getElementById(
+            'buscarModal'
+        ).style.display = 'flex';
+
+    });
+
+
+    vacanteBtn.addEventListener('click', () => {
+
+        document.getElementById(
+            'vacanteModal'
+        ).style.display = 'flex';
+
+    });
+
+
+    function cerrarModal(id){
+
+        document.getElementById(id)
+        .style.display = 'none';
+
+    }
+
+
+    window.onclick = function(event){
+
+        const buscarModal =
+            document.getElementById('buscarModal');
+
+        const vacanteModal =
+            document.getElementById('vacanteModal');
+
+        if(event.target === buscarModal){
+
+            buscarModal.style.display = 'none';
+
+        }
+
+        if(event.target === vacanteModal){
+
+            vacanteModal.style.display = 'none';
+
+        }
+
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>
