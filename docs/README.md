@@ -7,9 +7,9 @@
 
 ### 👥 Integrantes y Roles
 
-*   **Irene Abellán Cerezo**: rol TBD
-*   **José Manuel Cascales Ortiz**: rol TBD
-*   **Luis Ferrán Lorenzo**: rol TBD
+*   **Irene Abellán Cerezo**: Backend Manager
+*   **José Manuel Cascales Ortiz**: Frontend Manager
+*   **Luis Ferrán Lorenzo**: Support & Project Coordinator
 
 ---
 
