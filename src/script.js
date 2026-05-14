@@ -1,3 +1,71 @@
+// =========================
+// ABRIR MODALES
+// =========================
+
+const buscarBtn =
+    document.querySelector('.primary-btn');
+
+const vacanteBtn =
+    document.querySelector('.secondary-btn');
+
+
+buscarBtn.addEventListener('click', () => {
+
+    document.getElementById(
+        'buscarModal'
+    ).style.display = 'flex';
+
+});
+
+
+vacanteBtn.addEventListener('click', () => {
+
+    document.getElementById(
+        'vacanteModal'
+    ).style.display = 'flex';
+
+});
+
+
+// =========================
+// CERRAR MODALES
+// =========================
+
+function cerrarModal(id){
+
+    document.getElementById(id)
+    .style.display = 'none';
+
+}
+
+
+window.onclick = function(event){
+
+    const buscarModal =
+        document.getElementById('buscarModal');
+
+    const vacanteModal =
+        document.getElementById('vacanteModal');
+
+    if(event.target === buscarModal){
+
+        buscarModal.style.display = 'none';
+
+    }
+
+    if(event.target === vacanteModal){
+
+        vacanteModal.style.display = 'none';
+
+    }
+
+}
+
+
+// =========================
+// CARGAR OFERTAS
+// =========================
+
 async function cargarOfertas(){
 
     try{
@@ -58,3 +126,10 @@ async function cargarOfertas(){
     }
 
 }
+
+
+// =========================
+// EJECUTAR
+// =========================
+
+cargarOfertas();
