@@ -572,32 +572,3 @@ body{
     font-weight: 600;
     font-size: 1rem;
 }
-
-html{
-    scroll-behavior: smooth;
-}
-
-.whatsapp-btn{
-
-    display: inline-block;
-    padding: 14px 22px;
-
-    background: #25D366;
-    color: white;
-
-    text-decoration: none;
-    border-radius: 12px;
-
-    font-weight: 600;
-
-}
-
-.sin-ofertas{
-
-    text-align: center;
-    width: 100%;
-
-    font-size: 1.2rem;
-    color: #64748b;
-
-}
