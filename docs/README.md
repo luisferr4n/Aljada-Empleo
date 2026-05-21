@@ -17,7 +17,7 @@
 *   **Lenguajes:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+).
 *   **Datos:** JSON (Estructura semántica) y XML (Formato WXR para WordPress).
 *   **Validación:** JSON Schema / XSD.
-*   **Herramientas:** GitHub Pages, WordPress, IA para generación de scripts.
+*   **Herramientas:** GitHub Pages, InfinityFree, IA para generación de scripts.
 
 ---
 
