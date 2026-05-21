@@ -1,65 +1,42 @@
 // =========================
-// ABRIR MODALES
+// MODAL
 // =========================
 
-const buscarBtn =
-    document.querySelector('.primary-btn');
+const botonesVacante =
+    document.querySelectorAll('.secondary-btn');
 
-const vacanteBtn =
-    document.querySelector('.secondary-btn');
+botonesVacante.forEach(btn => {
 
+    btn.addEventListener('click', () => {
 
-buscarBtn.addEventListener('click', () => {
+        document.getElementById(
+            'vacanteModal'
+        ).style.display = 'flex';
 
-    document.getElementById(
-        'buscarModal'
-    ).style.display = 'flex';
+    });
 
 });
-
-
-vacanteBtn.addEventListener('click', () => {
-
-    document.getElementById(
-        'vacanteModal'
-    ).style.display = 'flex';
-
-});
-
-
-// =========================
-// CERRAR MODALES
-// =========================
 
 function cerrarModal(id){
 
     document.getElementById(id)
-    .style.display = 'none';
+        .style.display = 'none';
 
 }
-
 
 window.onclick = function(event){
 
-    const buscarModal =
-        document.getElementById('buscarModal');
-
-    const vacanteModal =
+    const modal =
         document.getElementById('vacanteModal');
 
-    if(event.target === buscarModal){
+    if(event.target === modal){
 
-        buscarModal.style.display = 'none';
-
-    }
-
-    if(event.target === vacanteModal){
-
-        vacanteModal.style.display = 'none';
+        modal.style.display = 'none';
 
     }
 
 }
+
 
 // =========================
 // CARGAR OFERTAS
@@ -69,13 +46,11 @@ async function cargarOfertas(){
 
     try{
 
-        const respuesta =
-            await fetch(
-                'https://aljada-empleo.great-site.net/obtener_ofertas.php'
-            );
+        const respuesta = await fetch(
+            'https://aljada-empleo.great-site.net/obtener_ofertas.php'
+        );
 
-        const ofertas =
-            await respuesta.json();
+        const ofertas = await respuesta.json();
 
         const jobsGrid =
             document.querySelector('.jobs-grid');
@@ -118,39 +93,34 @@ async function cargarOfertas(){
 
         console.log(error);
 
-        console.log(
-            'Error cargando ofertas'
-        );
+        console.log('Error cargando ofertas');
 
     }
 
 }
 
-
-// =========================
-// EJECUTAR
-// =========================
-
 cargarOfertas();
+
 
 // =========================
 // PUBLICAR OFERTA
 // =========================
 
-const formulario =
-    document.getElementById('formularioOferta');
+document.addEventListener('DOMContentLoaded', () => {
 
-formulario.addEventListener('submit', async (e) => {
+    const formulario =
+        document.getElementById('formularioOferta');
 
-    e.preventDefault();
+    formulario.addEventListener('submit', async (e) => {
 
-    const formData =
-        new FormData(formulario);
+        e.preventDefault();
 
-    try{
+        const formData =
+            new FormData(formulario);
 
-        const respuesta =
-            await fetch(
+        try{
+
+            const respuesta = await fetch(
 
                 'https://aljada-empleo.great-site.net/publicar.php',
 
@@ -161,21 +131,34 @@ formulario.addEventListener('submit', async (e) => {
 
             );
 
-        const datos =
-            await respuesta.json();
+            const texto =
+                await respuesta.text();
 
-        alert(datos.message);
+            console.log(texto);
 
-        formulario.reset();
+            const datos =
+                JSON.parse(texto);
 
-        cargarOfertas();
+            alert(datos.message);
 
-    }catch(error){
+            if(datos.success){
 
-        console.log(error);
+                formulario.reset();
 
-        alert('Error publicando oferta');
+                cerrarModal('vacanteModal');
 
-    }
+                cargarOfertas();
+
+            }
+
+        }catch(error){
+
+            console.log(error);
+
+            alert('Error publicando oferta');
+
+        }
+
+    });
 
 });

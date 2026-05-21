@@ -8,192 +8,161 @@
     <title>Aljada Empleo</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="header">
+<header class="header">
 
-        <nav class="navbar">
+    <nav class="navbar">
 
-            <div class="logo">
-                <h2>Aljada Empleo</h2>
-            </div>
+        <div class="logo">
+            <h2>Aljada Empleo</h2>
+        </div>
 
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Empleos</a></li>
-                <li><a href="#">Empresas</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Empleos</a></li>
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
 
-            <div class="nav-buttons">
+        <div class="nav-buttons">
 
-                <button class="login-btn">
-                    Iniciar sesión
-                </button>
+            <button class="login-btn">
+                Iniciar sesión
+            </button>
 
-                <button class="register-btn secondary-btn">
-                    Publicar vacante
-                </button>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-left">
-
-                <span class="hero-tag">
-                    Encuentra oportunidades reales
-                </span>
-
-                <h1>
-                    Tu próximo trabajo está a un clic
-                </h1>
-
-                <p>
-                    Miles de empresas buscan talento como el tuyo.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <button class="primary-btn">
-                        Buscar empleo
-                    </button>
-
-                    <button class="secondary-btn">
-                        Publicar vacante
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="jobs-section">
-
-            <div class="section-title">
-
-                <h2>
-                    Ofertas destacadas
-                </h2>
-
-                <p>
-                    Ofertas publicadas por empresas reales.
-                </p>
-
-            </div>
-
-            <div class="jobs-grid"></div>
-
-        </section>
-
-    </main>
-
-    <footer class="footer">
-
-        <p>
-            © 2026 Aljada Empleo - Todos los derechos reservados
-        </p>
-
-    </footer>
-
-    <!-- MODAL PUBLICAR -->
-
-    <div class="modal" id="vacanteModal">
-
-        <div class="modal-content">
-
-            <span
-                class="close-btn"
-                onclick="cerrarModal('vacanteModal')"
-            >
-                &times;
-            </span>
-
-            <h2>Publicar vacante</h2>
-
-            <form
-                class="modal-form"
-                id="formularioOferta"
-            >
-
-                <input
-                    type="text"
-                    name="empresa"
-                    placeholder="Empresa"
-                    required
-                >
-
-                <input
-                    type="text"
-                    name="puesto"
-                    placeholder="Título del empleo"
-                    required
-                >
-
-                <input
-                    type="text"
-                    name="ubicacion"
-                    placeholder="Ubicación"
-                    required
-                >
-
-                <select
-                    name="tipo"
-                    required
-                >
-
-                    <option value="">
-                        Tipo de trabajo
-                    </option>
-
-                    <option>
-                        Remoto
-                    </option>
-
-                    <option>
-                        Presencial
-                    </option>
-
-                    <option>
-                        Híbrido
-                    </option>
-
-                </select>
-
-                <textarea
-                    rows="5"
-                    name="descripcion"
-                    placeholder="Describe la oferta..."
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    Publicar oferta
-                </button>
-
-            </form>
+            <button class="secondary-btn">
+                Publicar vacante
+            </button>
 
         </div>
 
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="hero-tag">
+            Encuentra oportunidades reales
+        </span>
+
+        <h1>
+            Tu próximo trabajo está a un clic
+        </h1>
+
+        <p>
+            Miles de empresas buscan talento como el tuyo.
+        </p>
+
     </div>
 
-    <script src="script.js"></script>
+</section>
+
+<section class="jobs-section">
+
+    <div class="section-title">
+
+        <h2>
+            Ofertas destacadas
+        </h2>
+
+        <p>
+            Ofertas publicadas dinámicamente.
+        </p>
+
+    </div>
+
+    <div class="jobs-grid"></div>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="modal" id="vacanteModal">
+
+    <div class="modal-content">
+
+        <span
+            class="close-btn"
+            onclick="cerrarModal('vacanteModal')"
+        >
+            &times;
+        </span>
+
+        <h2>Publicar vacante</h2>
+
+        <form
+            class="modal-form"
+            id="formularioOferta"
+        >
+
+            <input
+                type="text"
+                name="empresa"
+                placeholder="Empresa"
+                required
+            >
+
+            <input
+                type="text"
+                name="puesto"
+                placeholder="Título del empleo"
+                required
+            >
+
+            <input
+                type="text"
+                name="ubicacion"
+                placeholder="Ubicación"
+                required
+            >
+
+            <select
+                name="tipo"
+                required
+            >
+
+                <option value="">
+                    Tipo de trabajo
+                </option>
+
+                <option>
+                    Remoto
+                </option>
+
+                <option>
+                    Presencial
+                </option>
+
+                <option>
+                    Híbrido
+                </option>
+
+            </select>
+
+            <textarea
+                rows="5"
+                name="descripcion"
+                placeholder="Describe la oferta..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Publicar oferta
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
