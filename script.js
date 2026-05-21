@@ -72,7 +72,7 @@ async function cargarOfertas(){
 
         const respuesta =
             await fetch(
-                'https://aljada-empleo.great-site.net/ofertas.json'
+                'https://aljada-empleo.great-site.net/obtener_ofertas.php'
             );
 
         const ofertas =
