@@ -61,7 +61,6 @@ window.onclick = function(event){
 
 }
 
-
 // =========================
 // CARGAR OFERTAS
 // =========================
@@ -133,3 +132,50 @@ async function cargarOfertas(){
 // =========================
 
 cargarOfertas();
+
+// =========================
+// PUBLICAR OFERTA
+// =========================
+
+const formulario =
+    document.getElementById('formularioOferta');
+
+formulario.addEventListener('submit', async (e) => {
+
+    e.preventDefault();
+
+    const formData =
+        new FormData(formulario);
+
+    try{
+
+        const respuesta =
+            await fetch(
+
+                'https://aljada-empleo.great-site.net/publicar.php',
+
+                {
+                    method: 'POST',
+                    body: formData
+                }
+
+            );
+
+        const datos =
+            await respuesta.json();
+
+        alert(datos.message);
+
+        formulario.reset();
+
+        cargarOfertas();
+
+    }catch(error){
+
+        console.log(error);
+
+        alert('Error publicando oferta');
+
+    }
+
+});
